@@ -65,7 +65,8 @@
     border: 10px solid var(--dark);
     border-radius: 20px;
     /* box-shadow: inset 5px 5px 10px #bbb, inset -5px -5px 10px #fff; */
-    box-shadow: inset 5px 5px 10px #8f8f8f, inset -5px -5px 10px var(--light);
+    box-shadow: inset 5px 5px 10px var(--light2),
+      inset -5px -5px 10px var(--light2);
     transition: 0.5s;
     display: grid;
     grid-template-areas:
