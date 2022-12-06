@@ -115,7 +115,7 @@
   }
 
   .slider {
-    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 2em;
     border-radius: 1em;
