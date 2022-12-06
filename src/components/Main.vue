@@ -4,7 +4,9 @@
     ref="source" />
   <main class="container">
     <section class="container">
-      <Laptop v-show="source.btn" />
+      <Transition>
+        <Laptop v-show="source.btn == 2" />
+      </Transition>
     </section>
     <footer class="">
       <div class="container col">
@@ -76,6 +78,15 @@
 </script>
 
 <style scoped>
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
+  }
   main {
     height: 100%;
     width: 100%;

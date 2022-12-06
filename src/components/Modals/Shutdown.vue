@@ -5,7 +5,8 @@
       @click="$emit('cancel')">
       <div class="card">
         <h3 class="title">
-          System will Shutdown in <span>{{ timeleft }}</span
+          System will Shutdown in <span v-if="timeleft < 10">0</span
+          ><span>{{ timeleft }}</span
           >s
         </h3>
 
