@@ -1,10 +1,10 @@
 <template>
   <SideNav
     @shutdown="$emit('shutdown')"
-    :ref="source" />
+    ref="source" />
   <main class="container">
     <section class="container">
-      <Laptop v-if="source.btn === 2" />
+      <Laptop />
     </section>
     <footer class="">
       <div class="container col">
