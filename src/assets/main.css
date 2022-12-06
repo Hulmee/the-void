@@ -1,0 +1,87 @@
+* {
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+  --dark-trans: rgba(0, 0, 0, 0.9);
+  --dark: #3c4040;
+  --light: #efe6dd;
+  --gold: #c19e47;
+  --fail: #ff7070;
+  --info: #4f8dcf;
+  --success: #5cb270;
+  --tras-time: 500ms;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+/* :root {
+    font-size: 16px;
+  } */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: var(--dark);
+  color: var(--light);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bdr {
+  border: solid var(--info);
+}
+.btn-rnd {
+  height: 5em;
+  width: 5em;
+  margin: 1em;
+  border: solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #404444, #363a3a);
+  box-shadow: 5px 5px 10px #2a2d2d, -5px -5px 10px #4e5353;
+  cursor: pointer;
+}
+.btn-rnd:active {
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
+}
+.btn-rnd.muted {
+  background: var(--fail);
+  box-shadow: inset 5px 5px 10px #b34e4e, inset -5px -5px 10px #ff9292;
+}
+.btn-rnd-sm {
+  height: 3em;
+  width: 3em;
+  margin: 0.5em 1em;
+}
+.btn-rnd-sm:active {
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
+}
+.modal {
+  /* color: var(--light); */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-trans);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
