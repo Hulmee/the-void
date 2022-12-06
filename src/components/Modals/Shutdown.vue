@@ -41,13 +41,13 @@
 
   const emit = defineEmits(['cancel', 'now'])
   onMounted(() => {
-    const downloadTimer = setInterval(function () {
-      if (timeleft.value <= 0) {
-        clearInterval(downloadTimer)
-        emit('now')
-      }
-      timeleft.value -= 1
-    }, 1000)
+    // const downloadTimer = setInterval(function () {
+    //   if (timeleft.value <= 0) {
+    //     clearInterval(downloadTimer)
+    //     emit('now')
+    //   }
+    //   timeleft.value -= 1
+    // }, 1000)
   })
 </script>
 
@@ -60,7 +60,8 @@
     text-align: center;
     border: 10px solid var(--dark);
     border-radius: 20px;
-    box-shadow: inset 5px 5px 10px #bbb, inset -5px -5px 10px #fff;
+    /* box-shadow: inset 5px 5px 10px #bbb, inset -5px -5px 10px #fff; */
+    box-shadow: inset 5px 5px 10px #8f8f8f, inset -5px -5px 10px var(--light);
     transition: 0.5s;
     display: grid;
     grid-template-areas:

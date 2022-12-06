@@ -3,6 +3,7 @@
   --dark-trans: rgba(0, 0, 0, 0.9);
   --dark: #3c4040;
   --light: #efe6dd;
+  --light2: #777e7e;
   --gold: #c19e47;
   --fail: #ff7070;
   --info: #4f8dcf;
@@ -20,7 +21,7 @@
 *::after {
   box-sizing: border-box;
 }
-input[type='range']::-ms-track {
+input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
   cursor: pointer;
   background: transparent;
@@ -48,7 +49,7 @@ input[type='range']::-ms-track {
   height: 5em;
   width: 5em;
   margin: 1em;
-  border: solid;
+  border: solid var(--light2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -63,6 +64,10 @@ input[type='range']::-ms-track {
 .btn-rnd.muted {
   background: var(--fail);
   box-shadow: inset 5px 5px 10px #b34e4e, inset -5px -5px 10px #ff9292;
+}
+.btn-rnd.linked {
+  background: var(--info);
+  box-shadow: inset 5px 5px 10px #4378b0, inset -5px -5px 10px #5ba2ee;
 }
 .btn-rnd-sm {
   height: 3em;

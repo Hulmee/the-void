@@ -32,5 +32,6 @@
     background: var(--light);
     padding: 0.5em;
     border-radius: 1em;
+    box-shadow: 5px 5px 10px #2a2d2d, -5px -5px 10px #4e5353;
   }
 </style>

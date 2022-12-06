@@ -1,15 +1,20 @@
 <template>
-  <SideNav @shutdown="$emit('shutdown')" />
+  <SideNav
+    @shutdown="$emit('shutdown')"
+    :ref="source" />
   <main class="container">
     <section class="container">
-      <h1>Zoom is Selected</h1>
+      <Laptop v-if="source.btn === 2" />
     </section>
     <footer class="">
       <div class="container col">
         <div class="btn-rnd btn-rnd-sm">
           <font-awesome-icon icon="fa-solid fa-gear" />
         </div>
-        <div class="btn-rnd btn-rnd-sm">
+        <div
+          class="btn-rnd btn-rnd-sm"
+          @click="isLinked = !isLinked"
+          :class="{ linked: isLinked }">
           <font-awesome-icon icon="fa-solid fa-link" />
         </div>
       </div>
@@ -55,15 +60,20 @@
 <script setup>
   import { ref } from '@vue/reactivity'
   import SideNav from './SideNav/SideNav.vue'
+  import Laptop from './MainSubPages/Laptop.vue'
 
   const volMute = ref(false)
   const micMute = ref(false)
+  const isLinked = ref(false)
+  const source = ref(null)
+
   const emit = defineEmits(['shutdown'])
   const shutdown = () => {
     confirmSD.value = false
     emit('shutdown')
   }
 </script>
+
 <style scoped>
   main {
     height: 100%;
@@ -89,46 +99,34 @@
   }
   .slidecontainer {
     width: 30%;
-    /* margin-left: auto; */
     padding: 0 2em;
-    /* Width of the outside container */
   }
 
-  /* The slider itself */
   .slider {
     -webkit-appearance: none;
-    appearance: none;
     width: 100%;
-    height: 1.5em;
-    background: var(--light);
+    height: 2em;
+    border-radius: 1em;
+    background: var(--dark);
     outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
+    border: 3px solid var(--light2);
+    box-shadow: 5px 5px 10px #2a2d2d, -5px -5px 10px #4e5353;
   }
 
   .slidecontainer {
     width: 30%;
-    /* Width of the outside container */
-  }
-
-  .slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 2em;
-    border-radius: 1em;
-    /* color: white; */
   }
 
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* Override default look */
     appearance: none;
-    width: 3em;
-    height: 3em;
+    width: 1.5em;
+    height: 5em;
     border-radius: 2em;
     background: var(--gold);
+
+    box-shadow: 2.5px 2.5px 5px #2a2d2d, -2.5px -2.5px 5px #4e5353;
+
     cursor: pointer;
   }
 

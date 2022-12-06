@@ -1,7 +1,9 @@
 <template>
   <nav :class="{ expand: navExpand }">
     <ul class="nav">
-      <li class="nav-item expand">
+      <li
+        id="logo"
+        class="nav-item expand">
         <span class="nav-text logo-text"> Room Name </span>
         <font-awesome-icon
           icon="fa-solid fa-angles-right"
@@ -80,6 +82,9 @@
     return 'none'
   })
   const emit = defineEmits(['shutdown'])
+  defineExpose({
+    btn,
+  })
 </script>
 
 <style scoped>
@@ -139,6 +144,7 @@
     margin: 0 0 1em 1em;
     justify-content: center;
     background: var(--light);
+    border: none;
   }
 
   .nav-item {
@@ -148,14 +154,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 1em;
-    margin-left: 1em;
+    margin: 0 0 0.5em 1em;
     transition: 300ms;
     cursor: pointer;
+    /* border: solid var(--light2); */
   }
 
   .nav-item.active {
     color: var(--gold);
-    box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
+    /* box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353; */
+    box-shadow: 20px 20px 60px #181a1a, -20px -20px 60px #606666;
   }
 
   .nav-text {
@@ -177,6 +185,10 @@
     margin-top: auto;
     text-align: center;
     justify-content: center;
+    border: none;
+  }
+  #logo {
+    border: none;
   }
 
   .clock {

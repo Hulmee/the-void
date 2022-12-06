@@ -4,7 +4,7 @@
     @shutdown="confirmSD = true" />
   <Start
     v-if="Pages === 300"
-    @click="Pages++" />
+    @click="Pages = 301" />
   <Shutdown
     v-if="confirmSD"
     @cancel="confirmSD = false"
