@@ -4,7 +4,7 @@
     ref="source" />
   <main class="container">
     <section class="container">
-      <Laptop />
+      <Laptop v-show="source.btn" />
     </section>
     <footer class="">
       <div class="container col">
@@ -61,11 +61,12 @@
   import { ref } from '@vue/reactivity'
   import SideNav from './SideNav/SideNav.vue'
   import Laptop from './MainSubPages/Laptop.vue'
+  import { watch } from '@vue/runtime-core'
 
   const volMute = ref(false)
   const micMute = ref(false)
   const isLinked = ref(false)
-  const source = ref(null)
+  const source = ref(0)
 
   const emit = defineEmits(['shutdown'])
   const shutdown = () => {

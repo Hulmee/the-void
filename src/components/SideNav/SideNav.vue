@@ -70,7 +70,7 @@
   import { ref } from '@vue/reactivity'
   import { computed } from '@vue/runtime-core'
 
-  const navExpand = ref(true)
+  const navExpand = ref(false)
   const btn = ref(0)
   const btnClick = n => {
     btn.value = n
@@ -163,7 +163,7 @@
   .nav-item.active {
     color: var(--gold);
     /* box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353; */
-    box-shadow: 20px 20px 60px #181a1a, -20px -20px 60px #606666;
+    box-shadow: 10px 10px 60px #181a1a, -10px -10px 60px #606666;
   }
 
   .nav-text {

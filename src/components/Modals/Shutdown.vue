@@ -41,17 +41,20 @@
 
   const emit = defineEmits(['cancel', 'now'])
   onMounted(() => {
-    // const downloadTimer = setInterval(function () {
-    //   if (timeleft.value <= 0) {
-    //     clearInterval(downloadTimer)
-    //     emit('now')
-    //   }
-    //   timeleft.value -= 1
-    // }, 1000)
+    const downloadTimer = setInterval(function () {
+      if (timeleft.value <= 0) {
+        clearInterval(downloadTimer)
+        emit('now')
+      }
+      timeleft.value -= 1
+    }, 1000)
   })
 </script>
 
 <style scoped>
+  span {
+    width: 2em;
+  }
   .card {
     max-height: 200px;
     height: 50%;
@@ -69,9 +72,6 @@
       'cont can';
   }
 
-  /* .card:hover {
-    height: 25%;
-  } */
   .title {
     color: var(--light);
     grid-area: title;
@@ -99,9 +99,5 @@
     justify-content: center;
     color: var(--light);
     margin-bottom: 1em;
-  }
-  .btn-rnd-sm {
-    color: var(--light);
-    border: var(--light);
   }
 </style>
