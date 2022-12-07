@@ -70,7 +70,7 @@
   import { ref } from '@vue/reactivity'
   import { computed } from '@vue/runtime-core'
 
-  const navExpand = ref(false)
+  const navExpand = ref(true)
   const btn = ref(0)
   const btnClick = n => {
     btn.value = n
@@ -157,9 +157,10 @@
     margin: 0 0 0.5em 1em;
     transition: 300ms;
     cursor: pointer;
-    /* border: solid var(--light2); */
   }
-
+  .nav-item:nth-child(5) {
+    display: none;
+  }
   .nav-item.active {
     color: var(--gold);
     /* box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353; */

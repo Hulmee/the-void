@@ -4,9 +4,12 @@
     ref="source" />
   <main class="container">
     <section class="container">
-      <Transition>
-        <Laptop v-show="source.btn == 2" />
-      </Transition>
+      <!-- <Transition> -->
+      <Laptop v-show="source.btn == 2" />
+      <!-- </Transition>
+      <Transition> -->
+      <PC v-show="source.btn == 1" />
+      <!-- </Transition> -->
     </section>
     <footer class="">
       <div class="container col">
@@ -63,6 +66,7 @@
   import { ref } from '@vue/reactivity'
   import SideNav from './SideNav/SideNav.vue'
   import Laptop from './MainSubPages/Laptop.vue'
+  import PC from './MainSubPages/PC.vue'
   import { watch } from '@vue/runtime-core'
 
   const volMute = ref(false)
@@ -78,9 +82,12 @@
 </script>
 
 <style scoped>
-  .v-enter-active,
+  .v-enter-active {
+    transition: opacity 0.5s ease;
+  }
   .v-leave-active {
     transition: opacity 0.5s ease;
+    transition-delay: 0.5s;
   }
 
   .v-enter-from,
