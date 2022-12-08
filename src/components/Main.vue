@@ -3,13 +3,16 @@
     @shutdown="$emit('shutdown')"
     ref="source" />
   <main class="container">
-    <section class="container">
+    <section
+      id="subP"
+      class="container">
       <!-- <Transition> -->
       <Laptop v-show="source.btn == 2" />
       <!-- </Transition>
       <Transition> -->
       <PC v-show="source.btn == 1" />
       <!-- </Transition> -->
+      <IPTV v-show="source.btn == 3" />
     </section>
     <footer class="">
       <div class="container col">
@@ -67,6 +70,7 @@
   import SideNav from './SideNav/SideNav.vue'
   import Laptop from './MainSubPages/Laptop.vue'
   import PC from './MainSubPages/PC.vue'
+  import IPTV from './MainSubPages/IPTV.vue'
   import { watch } from '@vue/runtime-core'
 
   const volMute = ref(false)
@@ -100,10 +104,9 @@
     flex-direction: column;
   }
 
-  section {
-    height: 100%;
+  #subP {
+    height: 80%;
     width: 100%;
-    /* margin-left: 400px; */
   }
 
   footer {
