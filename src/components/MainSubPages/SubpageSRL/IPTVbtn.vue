@@ -2,94 +2,94 @@
   <!-- <section class="container"> -->
   <div class="btn-rec">
     <img
-      src="@/assets/Images/TV Logos/7.svg"
+      src="@/assets/Images/TV-Logos/7.svg"
       v-if="num === 1" />
     <img
-      src="@/assets/Images/TV Logos/7bravo.svg"
+      src="@/assets/Images/TV-Logos/7bravo.svg"
       v-if="num === 2" />
     <img
-      src="@/assets/Images/TV Logos/7flix.svg"
+      src="@/assets/Images/TV-Logos/7flix.svg"
       v-if="num === 3" />
     <img
-      src="@/assets/Images/TV Logos/7mate.svg"
+      src="@/assets/Images/TV-Logos/7mate.svg"
       v-if="num === 4" />
     <img
-      src="@/assets/Images/TV Logos/7two.svg"
+      src="@/assets/Images/TV-Logos/7two.svg"
       v-if="num === 5" />
     <img
-      src="@/assets/Images/TV Logos/9gemhd.svg"
+      src="@/assets/Images/TV-Logos/9gemhd.svg"
       v-if="num === 6" />
     <img
-      src="@/assets/Images/TV Logos/9go!.svg"
+      src="@/assets/Images/TV-Logos/9go!.svg"
       v-if="num === 7" />
     <img
-      src="@/assets/Images/TV Logos/9hd.svg"
+      src="@/assets/Images/TV-Logos/9hd.svg"
       v-if="num === 8" />
     <img
-      src="@/assets/Images/TV Logos/9life.svg"
+      src="@/assets/Images/TV-Logos/9life.svg"
       v-if="num === 9" />
     <img
-      src="@/assets/Images/TV Logos/9rush.svg"
+      src="@/assets/Images/TV-Logos/9rush.svg"
       v-if="num === 10" />
     <img
-      src="@/assets/Images/TV Logos/10 bold.svg"
+      src="@/assets/Images/TV-Logos/10-bold.svg"
       v-if="num === 11" />
     <img
-      src="@/assets/Images/TV Logos/10 hd.svg"
+      src="@/assets/Images/TV-Logos/10-hd.svg"
       v-if="num === 12" />
     <img
-      src="@/assets/Images/TV Logos/10 peach.svg"
+      src="@/assets/Images/TV-Logos/10-peach.svg"
       v-if="num === 13" />
     <img
-      src="@/assets/Images/TV Logos/10 shake.svg"
+      src="@/assets/Images/TV-Logos/10-shake.svg"
       v-if="num === 14" />
     <img
-      src="@/assets/Images/TV Logos/10.svg"
+      src="@/assets/Images/TV-Logos/10.svg"
       v-if="num === 15" />
     <img
-      src="@/assets/Images/TV Logos/abc me.svg"
+      src="@/assets/Images/TV-Logos/abc-me.svg"
       v-if="num === 16" />
     <img
-      src="@/assets/Images/TV Logos/abc news.svg"
+      src="@/assets/Images/TV-Logos/abc-news.svg"
       v-if="num === 17" />
     <img
-      src="@/assets/Images/TV Logos/abckids-tvplus.svg"
+      src="@/assets/Images/TV-Logos/abckids-tvplus.svg"
       v-if="num === 18" />
     <img
-      src="@/assets/Images/TV Logos/abc tv.svg"
+      src="@/assets/Images/TV-Logos/abc-tv.svg"
       v-if="num === 19" />
     <img
-      src="@/assets/Images/TV Logos/abc hd.svg"
+      src="@/assets/Images/TV-Logos/abc-hd.svg"
       v-if="num === 20" />
     <img
-      src="@/assets/Images/TV Logos/c31 melbourne.svg"
+      src="@/assets/Images/TV-Logos/c31-melbourne.svg"
       v-if="num === 21" />
     <img
-      src="@/assets/Images/TV Logos/nitv.svg"
+      src="@/assets/Images/TV-Logos/nitv.svg"
       v-if="num === 22" />
     <img
-      src="@/assets/Images/TV Logos/sbs food.svg"
+      src="@/assets/Images/TV-Logos/sbs-food.svg"
       v-if="num === 23" />
     <img
-      src="@/assets/Images/TV Logos/sbs hd.svg"
+      src="@/assets/Images/TV-Logos/sbs-hd.svg"
       v-if="num === 24" />
     <img
-      src="@/assets/Images/TV Logos/sbs one.svg"
+      src="@/assets/Images/TV-Logos/sbs-one.svg"
       v-if="num === 25" />
     <img
-      src="@/assets/Images/TV Logos/sbs viceland hd.svg"
+      src="@/assets/Images/TV-Logos/sbs-viceland-hd.svg"
       v-if="num === 26" />
     <img
-      src="@/assets/Images/TV Logos/sbs worldwatch.svg"
+      src="@/assets/Images/TV-Logos/sbs-worldwatch.svg"
       v-if="num === 27" />
     <!-- <img
-      src="@/assets/Images/TV Logos/"
+      src="@/assets/Images/TV-Logos/"
       v-if="num === 28" />
     <img
-      src="@/assets/Images/TV Logos/"
+      src="@/assets/Images/TV-Logos/"
       v-if="num === 29" />
     <img
-      src="@/assets/Images/TV Logos/"
+      src="@/assets/Images/TV-Logos/"
       v-if="num === 30" /> -->
   </div>
   <!-- </section> -->
