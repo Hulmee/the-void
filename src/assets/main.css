@@ -108,3 +108,8 @@ li {
   list-style: none;
   gap: 1em;
 }
+.disable {
+  /* display: none; */
+  pointer-events: none;
+  opacity: 0.1;
+}

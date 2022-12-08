@@ -38,7 +38,7 @@
           size="2x" />
       </li>
       <li
-        class="nav-item"
+        class="nav-item disable"
         :class="{ active: btn === 4 }"
         @click="btnClick(4)">
         <h3 class="nav-text">Signage</h3>
@@ -153,9 +153,7 @@
     transition: 300ms;
     cursor: pointer;
   }
-  .nav-item:nth-child(5) {
-    display: none;
-  }
+
   .nav-item.active {
     color: var(--gold);
     box-shadow: 10px 10px 60px #181a1a, -10px -10px 60px #606666;

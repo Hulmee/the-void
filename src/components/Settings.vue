@@ -4,13 +4,17 @@
     class="container">
     <section
       @click.self="$emit('return')"
-      id="menueSP"></section>
+      id="menueSP"
+      class="">
+      <Lighting v-if="btnProp[0].Feedback" />
+    </section>
     <nav>
       <ul>
         <MenueBtn
-          v-for="i of 7"
-          :key="i"
-          :num="i" />
+          v-for="btn of btnProp"
+          :key="btn.id"
+          :btnProp="btn"
+          @click="menuSwitch(btn)" />
       </ul>
       <div
         class="return"
@@ -28,9 +32,83 @@
 </template>
 
 <script setup>
-  import SideNav from './SideNav/SideNav.vue'
-  import MenueBtn from './SideNav/MenueBtn.vue'
+  // import Vue thgings
+  import { ref } from '@vue/reactivity'
+
+  // import Menu Buttons
+  import MenueBtn from './Menu/MenueBtn.vue'
+  //imporet Menu Sub Pages
+  import Lighting from './Menu/Lighting.vue'
+
   const emit = defineEmits(['return'])
+
+  // Menu button logic and data
+  const menuSwitch = e => {
+      btnProp.value.forEach(fe => {
+        fe.Feedback = false
+      })
+      btnProp.value[e.id - 1].Feedback = true
+    },
+    btnProp = ref([
+      {
+        id: 1,
+        Enable: true,
+        Visable: true,
+        Feedback: true,
+        icon: 2,
+        Label: 'Lighting',
+      },
+      {
+        id: 2,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        icon: 6,
+        Label: 'Cafe TV',
+      },
+      {
+        id: 3,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        icon: 1,
+        Label: 'Microphones',
+      },
+      {
+        id: 4,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        icon: 3,
+        Label: 'Cameras',
+      },
+      {
+        id: 5,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        icon: 4,
+        Label: 'Linking',
+      },
+      {
+        id: 6,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        icon: 5,
+        Label: 'Tech Settings',
+      },
+      {
+        id: 7,
+        Enable: false,
+        Visable: true,
+        Feedback: false,
+        icon: 7,
+        Label: 'Microphones',
+      },
+    ])
+
+  // menu subPages logic
 </script>
 
 <style scoped>
@@ -50,17 +128,16 @@
     background: var(--dark-trans);
     /* opacity: 0.9; */
   }
-  #return-arrow {
-    transform: scaleX(-1);
-  }
   #menueSP {
+    display: flex;
     height: 100%;
     width: 100%;
   }
   nav {
     width: 300px;
     height: 100%;
-    background: var(--dark);
+    /* background: var(--dark); */
+    background: #141515;
     display: flex;
     flex-direction: column;
   }
@@ -73,7 +150,6 @@
     margin: 0 0 0.5em 0.5em;
     transition: 300ms;
     cursor: pointer;
-    /* font-size: 0.9em; */
     font-size: 0.9em;
   }
 
@@ -91,5 +167,11 @@
     justify-content: center;
     margin-top: auto;
     margin-bottom: 0.25em;
+  }
+  .btn-rnd {
+    background: #141515;
+  }
+  #return-arrow {
+    transform: scaleX(-1);
   }
 </style>
