@@ -15,11 +15,14 @@
       <IPTV v-show="source.btn == 3" />
     </section>
     <footer class="">
-      <div class="container col">
-        <div class="btn-rnd btn-rnd-sm">
+      <div class="adv-btn">
+        <div
+          class="btn-rnd btn-rnd-sm"
+          @click="showSettings = true">
           <font-awesome-icon icon="fa-solid fa-gear" />
         </div>
         <div
+          v-if="linkable"
           class="btn-rnd btn-rnd-sm"
           @click="isLinked = !isLinked"
           :class="{ linked: isLinked }">
@@ -63,6 +66,9 @@
       </div>
     </footer>
   </main>
+  <Settings
+    v-if="showSettings"
+    @return="showSettings = false" />
 </template>
 
 <script setup>
@@ -71,12 +77,15 @@
   import Laptop from './MainSubPages/Laptop.vue'
   import PC from './MainSubPages/PC.vue'
   import IPTV from './MainSubPages/IPTV.vue'
+  import Settings from './Settings.vue'
   import { watch } from '@vue/runtime-core'
 
   const volMute = ref(false)
   const micMute = ref(false)
   const isLinked = ref(false)
   const source = ref(0)
+  const linkable = ref(false),
+    showSettings = ref(true)
 
   const emit = defineEmits(['shutdown'])
   const shutdown = () => {
@@ -111,14 +120,20 @@
 
   footer {
     width: 100%;
-    height: 10em;
+    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .col {
+
+  .adv-btn {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
+
   .slidecontainer {
     width: 30%;
     padding: 0 2em;

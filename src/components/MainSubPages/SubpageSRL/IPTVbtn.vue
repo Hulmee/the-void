@@ -123,6 +123,10 @@
     box-shadow: 5px 5px 10px #2a2d2d, -5px -5px 10px #4e5353;
     cursor: pointer;
   }
+  .btn-rec.linked {
+    background: var(--info);
+    box-shadow: inset 5px 5px 10px #4378b0, inset -5px -5px 10px #5ba2ee;
+  }
   img {
     height: 100%;
   }

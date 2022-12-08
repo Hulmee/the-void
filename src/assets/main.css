@@ -1,5 +1,13 @@
 * {
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+  font-family: 'JetBrains Mono', monospace;
+  /* @font-face {
+    src: url('./font/Soleil.otf') format('opentype');
+  }
+  font-family: soleil, sans-serif;
+  font-style: normal;
+  font-weight: 300; */
+
   --dark-trans: rgba(0, 0, 0, 0.9);
   --dark: #3c4040;
   --light: #efe6dd;
@@ -12,7 +20,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'JetBrains Mono', monospace;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -23,6 +30,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+html {
+  height: 100vh;
+  width: 100vw;
 }
 input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
@@ -92,4 +103,8 @@ input[type='range']::-webkit-slider-runnable-track {
   left: 0;
   top: 0;
   z-index: 99;
+}
+li {
+  list-style: none;
+  gap: 1em;
 }

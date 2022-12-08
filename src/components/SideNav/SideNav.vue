@@ -129,11 +129,6 @@
     width: 300px;
   }
 
-  li {
-    list-style: none;
-    gap: 1em;
-  }
-
   .logo-text {
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -163,7 +158,6 @@
   }
   .nav-item.active {
     color: var(--gold);
-    /* box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353; */
     box-shadow: 10px 10px 60px #181a1a, -10px -10px 60px #606666;
   }
 
