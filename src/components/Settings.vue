@@ -112,12 +112,6 @@
 </script>
 
 <style scoped>
-  /* h1 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: auto;
-    margin-bottom: 0.3em;
-  } */
   #tech-page {
     height: 100vh;
     width: 100vw;
@@ -126,7 +120,6 @@
     left: 0;
     z-index: 9;
     background: var(--dark-trans);
-    /* opacity: 0.9; */
   }
   #menueSP {
     display: flex;
@@ -136,7 +129,7 @@
   nav {
     width: 300px;
     height: 100%;
-    /* background: var(--dark); */
+    border-left: solid var(--gold);
     background: #141515;
     display: flex;
     flex-direction: column;

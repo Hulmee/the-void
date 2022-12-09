@@ -8,7 +8,7 @@
   font-style: normal;
   font-weight: 300; */
 
-  --dark-trans: rgba(0, 0, 0, 0.9);
+  --dark-trans: rgba(0, 0, 0, 0.7);
   --dark: #3c4040;
   --light: #efe6dd;
   --light2: #777e7e;
@@ -77,11 +77,18 @@ input[type='range']::-webkit-slider-runnable-track {
 }
 .btn-rnd.muted {
   background: var(--fail);
-  box-shadow: inset 5px 5px 10px #b34e4e, inset -5px -5px 10px #ff9292;
+  /* box-shadow: inset 5px 5px 10px #b34e4e, inset -5px -5px 10px #ff9292; */
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
 }
 .btn-rnd.linked {
   background: var(--info);
-  box-shadow: inset 5px 5px 10px #4378b0, inset -5px -5px 10px #5ba2ee;
+  /* box-shadow: inset 5px 5px 10px #4378b0, inset -5px -5px 10px #5ba2ee; */
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
+}
+.btn-rnd.active {
+  background: var(--gold);
+  /* box-shadow: inset 5px 5px 10px #a4863c, inset -5px -5px 10px #deb652; */
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
 }
 .btn-rnd-sm {
   height: 3em;
