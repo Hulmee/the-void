@@ -54,7 +54,7 @@
         id: 1,
         Enable: true,
         Visable: true,
-        Feedback: true,
+        Feedback: false,
         icon: 2,
         Label: 'Lighting',
       },

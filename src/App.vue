@@ -18,7 +18,7 @@
 
   // import modals
   import Shutdown from './components/Modals/Shutdown.vue'
-  const Pages = ref(301)
+  const Pages = ref(300)
   const confirmSD = ref(false)
   const shutdwnAct = () => {
     Pages.value = 300
