@@ -4,38 +4,204 @@
       <h2 class="label">Zone 1</h2>
       <div
         class="btn-con"
-        v-for="i of 10"
-        :key="i"
-        :class="`btn-${i}`">
+        v-for="btn of zone1"
+        :key="btn.id"
+        :class="[
+          { disable: !btn.Enable, hiden: !btn.Visable },
+          `btn-${btn.id}`,
+        ]"
+        @click="z1Switch(btn)">
         <div
           id=""
           class="btn-rnd btn-rnd-sm"
-          :class="{ active: true }">
+          :class="{ active: btn.Feedback }">
           <font-awesome-icon icon="fa-regular fa-lightbulb" />
         </div>
-        <p class="p-lab">Preset {{ i }}</p>
+        <p class="p-lab">{{ btn.Label }}</p>
       </div>
     </section>
     <section class="zone">
       <h2 class="label">Zone 2</h2>
       <div
         class="btn-con"
-        v-for="i of 10"
-        :key="i"
-        :class="`btn-${i}`">
+        v-for="btn of zone2"
+        :key="btn.id"
+        :class="[
+          { disable: !btn.Enable, hiden: !btn.Visable },
+          `btn-${btn.id}`,
+        ]"
+        @click="z2Switch(btn)">
         <div
           id=""
-          class="btn-rnd btn-rnd-sm">
+          class="btn-rnd btn-rnd-sm"
+          :class="{ active: btn.Feedback }">
           <font-awesome-icon icon="fa-regular fa-lightbulb" />
         </div>
-        <p class="p-lab">Preset {{ i }}</p>
+        <p class="p-lab">{{ btn.Label }}</p>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-  //
+  import { ref } from '@vue/reactivity'
+
+  const zone1 = ref([
+      {
+        id: 1,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: '100%',
+      },
+      {
+        id: 2,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Office Hours',
+      },
+      {
+        id: 3,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Cocktail',
+      },
+      {
+        id: 4,
+        Enable: false,
+        Visable: false,
+        Feedback: false,
+        Label: 'preset',
+      },
+      {
+        id: 5,
+        Enable: true,
+        Visable: false,
+        Feedback: false,
+        Label: 'preset',
+      },
+      {
+        id: 6,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Presentaion',
+      },
+      {
+        id: 7,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Training',
+      },
+      {
+        id: 8,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Off',
+      },
+      {
+        id: 9,
+        Enable: true,
+        Visable: false,
+        Feedback: false,
+        Label: 'Office Hours',
+      },
+      {
+        id: 10,
+        Enable: true,
+        Visable: false,
+        Feedback: false,
+        Label: 'Office Hours',
+      },
+    ]),
+    z1Switch = e => {
+      zone1.value.forEach(fe => {
+        fe.Feedback = false
+      })
+      zone1.value[e.id - 1].Feedback = true
+    },
+    zone2 = ref([
+      {
+        id: 1,
+        Enable: true,
+        Visable: true,
+        Feedback: true,
+        Label: 'Hesta Purple',
+      },
+      {
+        id: 2,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Warm White',
+      },
+      {
+        id: 3,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Cool White',
+      },
+      {
+        id: 4,
+        Enable: false,
+        Visable: false,
+        Feedback: false,
+        Label: 'preset',
+      },
+      {
+        id: 5,
+        Enable: true,
+        Visable: false,
+        Feedback: false,
+        Label: 'preset',
+      },
+      {
+        id: 6,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Red',
+      },
+      {
+        id: 7,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Blue',
+      },
+      {
+        id: 8,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Green',
+      },
+      {
+        id: 9,
+        Enable: true,
+        Visable: true,
+        Feedback: false,
+        Label: 'Off',
+      },
+      {
+        id: 10,
+        Enable: true,
+        Visable: false,
+        Feedback: false,
+        Label: 'Preset',
+      },
+    ]),
+    z2Switch = e => {
+      zone2.value.forEach(fe => {
+        fe.Feedback = false
+      })
+      zone2.value[e.id - 1].Feedback = true
+    }
 </script>
 
 <style scoped>
@@ -59,6 +225,9 @@
     grid-column: 1/3;
     grid-row: 1/2;
     padding-left: 0.5em;
+  }
+  .btn-con.hiden {
+    display: none;
   }
   .p-lab {
     display: flex;
