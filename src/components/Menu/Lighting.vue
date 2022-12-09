@@ -130,7 +130,7 @@
         Enable: true,
         Visable: true,
         Feedback: true,
-        Label: 'Hesta Purple',
+        Label: 'Purple',
       },
       {
         id: 2,
@@ -225,6 +225,9 @@
     grid-column: 1/3;
     grid-row: 1/2;
     padding-left: 0.5em;
+  }
+  .btn-con {
+    padding-left: 1em;
   }
   .btn-con.hiden {
     display: none;
