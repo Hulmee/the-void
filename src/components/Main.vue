@@ -66,9 +66,11 @@
       </div>
     </footer>
   </main>
-  <Settings
-    v-if="showSettings"
-    @return="showSettings = false" />
+  <Transition name="slide-fade">
+    <Settings
+      v-if="showSettings"
+      @return="showSettings = false" />
+  </Transition>
 </template>
 
 <script setup>
@@ -95,17 +97,18 @@
 </script>
 
 <style scoped>
-  .v-enter-active {
-    transition: opacity 0.5s ease;
-  }
-  .v-leave-active {
-    transition: opacity 0.5s ease;
-    transition-delay: 0.5s;
+  .slide-fade-enter-active {
+    transition: all 0.3s ease-out;
   }
 
-  .v-enter-from,
-  .v-leave-to {
-    opacity: 0;
+  .slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    /* opacity: 0; */
   }
   main {
     height: 100%;
