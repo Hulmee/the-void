@@ -6,10 +6,11 @@
       @click.self="$emit('return')"
       id="menueSP"
       class="">
-      <transition-group name="slide-fade">
-        <Lighting v-if="btnProp[0].Feedback" />
-        <CafeTV v-if="btnProp[1].Feedback" />
-      </transition-group>
+      <!-- <transition-group name="slide-fade"> -->
+      <Lighting v-if="btnProp[0].Feedback" />
+      <CafeTV v-if="btnProp[1].Feedback" />
+      <Microphones v-if="btnProp[2].Feedback" />
+      <!-- </transition-group> -->
     </section>
     <nav>
       <ul>
@@ -43,12 +44,16 @@
   //imporet Menu Sub Pages
   import Lighting from './Menu/Lighting.vue'
   import CafeTV from './Menu/CafeTV.vue'
+  import Microphones from './Menu/Microphones.vue'
+
+ 
 
   const emit = defineEmits(['return'])
 
   // Menu button logic and data
   const menuSwitch = e => {
       btnProp.value.forEach(fe => {
+        // console.log(e)
         fe.Feedback = false
       })
       btnProp.value[e.id - 1].Feedback = true
@@ -66,7 +71,7 @@
         id: 2,
         Enable: true,
         Visable: true,
-        Feedback: true,
+        Feedback: false,
         icon: 6,
         Label: 'Cafe TV',
       },
@@ -74,7 +79,7 @@
         id: 3,
         Enable: true,
         Visable: true,
-        Feedback: false,
+        Feedback: true,
         icon: 1,
         Label: 'Microphones',
       },

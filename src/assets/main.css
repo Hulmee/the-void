@@ -62,6 +62,7 @@ input[type='range']::-webkit-slider-runnable-track {
 .bdr {
   border: solid var(--info);
 }
+
 .btn-rnd {
   height: 5em;
   width: 5em;

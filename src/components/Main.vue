@@ -87,7 +87,7 @@
   const isLinked = ref(false)
   const source = ref(0)
   const linkable = ref(false),
-    showSettings = ref(false)
+    showSettings = ref(true)
 
   const emit = defineEmits(['shutdown'])
   const shutdown = () => {
