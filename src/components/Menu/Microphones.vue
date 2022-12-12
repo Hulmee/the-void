@@ -93,12 +93,7 @@
       Label: 'Label',
     },
   ])
-  // const voldown = e => {
-  //     e.value--
-  //   },
-  //   volup = e => {
-  //     e.value++
-  //   }
+
 </script>
 
 <style scoped>

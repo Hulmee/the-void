@@ -10,6 +10,7 @@
       <Lighting v-if="btnProp[0].Feedback" />
       <CafeTV v-if="btnProp[1].Feedback" />
       <Microphones v-if="btnProp[2].Feedback" />
+      <Camera v-if="btnProp[3].Feedback" />
       <!-- </transition-group> -->
     </section>
     <nav>
@@ -45,8 +46,7 @@
   import Lighting from './Menu/Lighting.vue'
   import CafeTV from './Menu/CafeTV.vue'
   import Microphones from './Menu/Microphones.vue'
-
- 
+  import Camera from './Menu/Camera.vue'
 
   const emit = defineEmits(['return'])
 
@@ -79,7 +79,7 @@
         id: 3,
         Enable: true,
         Visable: true,
-        Feedback: true,
+        Feedback: false,
         icon: 1,
         Label: 'Microphones',
       },
