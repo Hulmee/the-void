@@ -6,7 +6,10 @@
       @click.self="$emit('return')"
       id="menueSP"
       class="">
-      <Lighting v-if="btnProp[0].Feedback" />
+      <transition-group name="slide-fade">
+        <Lighting v-if="btnProp[0].Feedback" />
+        <CafeTV v-if="btnProp[1].Feedback" />
+      </transition-group>
     </section>
     <nav>
       <ul>
@@ -39,6 +42,7 @@
   import MenueBtn from './Menu/MenueBtn.vue'
   //imporet Menu Sub Pages
   import Lighting from './Menu/Lighting.vue'
+  import CafeTV from './Menu/CafeTV.vue'
 
   const emit = defineEmits(['return'])
 
@@ -62,7 +66,7 @@
         id: 2,
         Enable: true,
         Visable: true,
-        Feedback: false,
+        Feedback: true,
         icon: 6,
         Label: 'Cafe TV',
       },
@@ -112,6 +116,19 @@
 </script>
 
 <style scoped>
+  .slide-fade-enter-active {
+    transition: all 0.8s ease-out;
+  }
+
+  /* .slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  } */
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+  }
   #tech-page {
     height: 100vh;
     width: 100vw;

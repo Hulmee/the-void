@@ -101,6 +101,29 @@ input[type='range']::-webkit-slider-runnable-track {
 .btn-rnd-sm:active {
   box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
 }
+.btn-rec {
+  height: 5em;
+  width: 7em;
+  margin: 1em;
+  border: solid var(--light2);
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #404444, #363a3a);
+  box-shadow: 5px 5px 10px #2a2d2d, -5px -5px 10px #4e5353;
+}
+.btn-rec:active {
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
+}
+.btn-rec-sm {
+  height: 3em;
+  width: 7em;
+  margin: 0.5em 1em;
+}
+.btn-rec-sm:active {
+  box-shadow: inset 5px 5px 10px #2a2d2d, inset -5px -5px 10px #4e5353;
+}
 .modal {
   /* color: var(--light); */
   height: 100vh;

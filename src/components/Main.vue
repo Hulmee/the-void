@@ -66,11 +66,11 @@
       </div>
     </footer>
   </main>
-  <Transition name="slide-fade">
-    <Settings
-      v-if="showSettings"
-      @return="showSettings = false" />
-  </Transition>
+  <!-- <Transition name="slide-fade"> -->
+  <Settings
+    v-if="showSettings"
+    @return="showSettings = false" />
+  <!-- </Transition> -->
 </template>
 
 <script setup>
