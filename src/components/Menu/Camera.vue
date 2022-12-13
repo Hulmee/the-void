@@ -159,6 +159,10 @@
     margin-left: auto;
     width: 50%;
     background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .cameras {
     height: 25%;
@@ -167,6 +171,8 @@
   }
   .cam-con {
     height: 75%;
+    max-height: 600px;
+    max-width: 520px;
     display: grid;
     grid-template-columns: 1.5fr repeat(5, 1fr);
     grid-template-rows: repeat(8, 1fr);
