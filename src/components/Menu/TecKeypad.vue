@@ -1,6 +1,6 @@
 <template>
   <div class="tech-kp container">
-    <div class="keypad bdr">
+    <div class="keypad">
       <h1>Enter Passcode</h1>
       <input
         type="password"
