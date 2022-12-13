@@ -11,6 +11,7 @@
       <CafeTV v-if="btnProp[1].Feedback" />
       <Microphones v-if="btnProp[2].Feedback" />
       <Camera v-if="btnProp[3].Feedback" />
+      <TecKeypad v-if="btnProp[5].Feedback" />
       <!-- </transition-group> -->
     </section>
     <nav>
@@ -47,6 +48,8 @@
   import CafeTV from './Menu/CafeTV.vue'
   import Microphones from './Menu/Microphones.vue'
   import Camera from './Menu/Camera.vue'
+  import TecKeypad from './Menu/TecKeypad.vue'
+  // import Keypanel from './Menu/Keypanel.vue'
 
   const emit = defineEmits(['return'])
 
