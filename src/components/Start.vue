@@ -2,16 +2,14 @@
   <section class="start container">
     <div class="logo-img container">
       <img
-        src="../assets/Images/hulmee Dev.svg"
+        src="../assets/Images/hulmee-Dev.svg"
         ref="logoRef"
         alt="" />
     </div>
     <div class="dir">
       <h1 class="dir-text">Touch Screen to Start</h1>
       <div class="tech">
-        <font-awesome-icon
-          icon="fa-brands fa-vuejs"
-          size="" />
+        <font-awesome-icon icon="fa-brands fa-vuejs" />
         <font-awesome-icon icon="fa-brands fa-html5" />
         <font-awesome-icon icon="fa-brands fa-css3" />
         <font-awesome-icon icon="fa-brands fa-square-js" />
