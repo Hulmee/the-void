@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <h1 class="text">Plug your device into HDMI cable</h1>
-    <div>
+    <div class="icons">
       <font-awesome-icon
         class="icons"
         icon="fa-solid fa-mobile-screen" />
@@ -31,5 +31,8 @@
   .icons {
     padding: 1em;
     height: 3em;
+  }
+  .icons {
+    color: var(--gold);
   }
 </style>
