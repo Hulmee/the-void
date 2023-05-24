@@ -22,10 +22,9 @@
           <font-awesome-icon icon="fa-solid fa-gear" />
         </div>
         <div
-          v-if="linkable"
           class="btn-rnd btn-rnd-sm"
           @click="isLinked = !isLinked"
-          :class="{ linked: isLinked }">
+          :class="{ linked: isLinked, hide: !linkable }">
           <font-awesome-icon icon="fa-solid fa-link" />
         </div>
       </div>
@@ -66,11 +65,10 @@
       </div>
     </footer>
   </main>
-  <!-- <Transition name="slide-fade"> -->
+
   <Settings
     v-if="showSettings"
     @return="showSettings = false" />
-  <!-- </Transition> -->
 </template>
 
 <script setup>
@@ -86,7 +84,7 @@
   const micMute = ref(false)
   const isLinked = ref(false)
   const source = ref(0)
-  const linkable = ref(false),
+  const linkable = ref(true),
     showSettings = ref(false)
 
   const emit = defineEmits(['shutdown'])
@@ -169,7 +167,9 @@
 
     cursor: pointer;
   }
-
+  .hide {
+    visibility: hidden;
+  }
   .mute {
     margin-left: auto;
     padding: 0 0.5em;

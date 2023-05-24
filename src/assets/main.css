@@ -83,6 +83,9 @@ input[type='password'] {
   background: var(--dark);
   color: var(--light);
 }
+button {
+  color: var(--light);
+}
 .container {
   display: flex;
   align-items: center;
